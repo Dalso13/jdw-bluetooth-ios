@@ -1,3 +1,11 @@
+//
+//  BleGattManager.swift
+//  JdwBluetooth
+//
+//  Created by 장동완 on 2/4/26.
+//
+
+
 import Foundation
 @preconcurrency import CoreBluetooth
 import Combine
