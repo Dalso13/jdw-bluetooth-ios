@@ -110,7 +110,6 @@ final class BleGattManager: NSObject, @unchecked Sendable {
     }
     
     // MARK: - Write / Read (Async/Await)
-    
     func writeCharacteristic(
         characteristicUuid: String,
         data: Data,
