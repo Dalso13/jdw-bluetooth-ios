@@ -23,7 +23,7 @@ iOS용 CoreBluetooth 기반 BLE(Bluetooth Low Energy) 통신 라이브러리
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Dalso13/jdw-bluetooth-ios.git", from: "0.0.3")
+    .package(url: "https://github.com/Dalso13/jdw-bluetooth-ios.git", from: "0.0.4")
 ]
 ```
 
