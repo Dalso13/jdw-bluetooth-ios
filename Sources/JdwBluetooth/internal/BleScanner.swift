@@ -67,8 +67,11 @@ final class BleScanner: NSObject, @unchecked Sendable {
             self.discoveredPeripherals.removeAll()
             self.scanStateSubject.send(.scanning(peripherals: []))
             
-            // UUID 변환 (String -> CBUUID)
-            let serviceUUIDs = [CBUUID(string: self.config.serviceUuid)]
+            var serviceUUIDs: [CBUUID]? = nil
+            
+            if !self.config.serviceUuid.isEmpty {
+                serviceUUIDs = [CBUUID(string: self.config.serviceUuid)]
+            }
             
             // 중복 허용 옵션 (RSSI 업데이트 등을 위해 false 권장, 필요시 true)
             self.centralManager.scanForPeripherals(
